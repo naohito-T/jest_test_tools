@@ -29,15 +29,13 @@ npm test
 
 **blog-page.tsx**
 SSG + Pre-fetch
-```bash
 npm run build時に静的ページにapi取得済みデータが組み込まれる。
-```
 
-**comment-page**
+**comment-page.tsx**
 SSG + Client side fetching
 npm run buildされた際には静的なページだけが作成され、クライアントがブラウザでアクセスした際にapiで取得する
 SEO関係ないことや、常に最新のデータがapiから欲しい時には使用する。
 
-**todos**
+**todos.tsx**
 SSG + Pre-fetch + Client side fetching
 SEO対策をしつつ、リアルタイムデータ取得が可能。
