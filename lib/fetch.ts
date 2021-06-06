@@ -31,11 +31,13 @@ export const getAllPostIds = async () => {
     }
   })
 }
-
+// DBから取得する
 export const getPostData = async (id: string) => {
   const res = await fetch(
-    new URL('https://jsonplaceholder.typicode.com/posts/?_limit=10')
+    new URL(`https://jsonplaceholder.typicode.com/posts/${id}`)
   )
   const post = await res.json()
-  return post
+  return {
+    post,
+  }
 }
