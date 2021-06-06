@@ -13,13 +13,10 @@ describe('Post component with given props', () => {
       body: 'dummy body 1',
     }
   })
-  afterEach(() => {
-    // cleanup() // モックサーバのリセット
-  })
   it('Should render currently with given props value', () => {
     render(<Post {...dummyProps} />) // dummyのpostを渡す
     expect(screen.getByText(dummyProps.id)).toBeInTheDocument()
     expect(screen.getByText(dummyProps.title)).toBeInTheDocument()
-    screen.debug()
+    // screen.debug
   })
 })
