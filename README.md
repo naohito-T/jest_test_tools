@@ -20,4 +20,24 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-##
+## Test Started
+```bash
+npm test
+```
+
+## Nextjs Pre-renderについて
+
+**blog-page.tsx**
+SSG + Pre-fetch
+```bash
+npm run build時に静的ページにapi取得済みデータが組み込まれる。
+```
+
+**comment-page**
+SSG + Client side fetching
+npm run buildされた際には静的なページだけが作成され、クライアントがブラウザでアクセスした際にapiで取得する
+SEO関係ないことや、常に最新のデータがapiから欲しい時には使用する。
+
+**todos**
+SSG + Pre-fetch + Client side fetching
+SEO対策をしつつ、リアルタイムデータ取得が可能。
